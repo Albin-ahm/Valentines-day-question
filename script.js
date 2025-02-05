@@ -70,7 +70,10 @@ function displayCatHeart() {
     // Set alternative text for the image (for accessibility)
     catHeartImage.alt = 'Cat Heart';
     // When the cat-heart image is fully loaded, add it to the image container
+    var caption = document.createElement('h1');
+    caption.textContent = 'See you on the 14th!'
     catHeartImage.onload = function() {
+        imageContainer.appendChild(caption);
         imageContainer.appendChild(catHeartImage);
         // Hide the options container
         document.getElementById('options').style.display = 'none';
